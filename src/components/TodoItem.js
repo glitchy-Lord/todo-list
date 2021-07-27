@@ -17,7 +17,10 @@ const TodoItem = (props) => {
 			</span>
 			<div>
 				<button type='button' onClick={completeHandler}>
-					<i className={`fa fa-check ${classes['fa-check']}`}></i>
+					<i
+						className={`fa fa-check ${classes['fa-check']} ${
+							props.isCompleted && classes['fa-check-completed']
+						}`}></i>
 				</button>
 				<button type='button' onClick={deleteHandler}>
 					<i className={`fa fa-trash ${classes['fa-trash']}`}></i>

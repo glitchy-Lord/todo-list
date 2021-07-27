@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import FilterTodo from './components/FilterTodo';
 import FormInput from './components/FormInput';
+import SortTodo from './components/SortTodo';
 import TodoList from './components/TodoList';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
 	const [todoList, setTodoList] = useState(getLocalStorage());
 	const [filterTodo, setFilterTodo] = useState('all');
+	const [sortTodo, setSortTodo] = useState('newest');
 
 	console.log(JSON.stringify(todoList));
 
@@ -27,10 +29,14 @@ function App() {
 				text: inputTodo,
 				id: Math.random().toString(),
 				isCompleted: false,
+				date: new Date().getTime(),
+				// date: new Date(),
 			});
 			return updatedList;
 		});
 	};
+
+	console.log(new Date());
 
 	const deleteTodoHandler = (id) => {
 		setTodoList((prevState) => {
@@ -67,21 +73,32 @@ function App() {
 		}
 	});
 
+	const sortChangeHandler = (sort) => {
+		setSortTodo(sort);
+	};
+
 	return (
 		<div className='App'>
 			<FormInput onAddTodo={addTodoHandler} />
 			<div className='container'>
 				{todoList.length > 0 && (
-					<FilterTodo
-						onFilterChange={filterChangeHandler}
-						selectedFilter={filterTodo}
-					/>
+					<div className='filter'>
+						<FilterTodo
+							onFilterChange={filterChangeHandler}
+							selectedFilter={filterTodo}
+						/>
+						<SortTodo
+							onSortChange={sortChangeHandler}
+							selectedSort={sortTodo}
+						/>
+					</div>
 				)}
 				{todoList.length > 0 ? (
 					<TodoList
 						list={filteredTodo}
 						onDeleteTodo={deleteTodoHandler}
 						onCompleteTodo={completeTodoHandler}
+						sortConfig={sortTodo}
 					/>
 				) : (
 					<h3>No Todo found. Add one?</h3>

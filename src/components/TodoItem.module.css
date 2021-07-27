@@ -21,7 +21,8 @@
 	font-size: 1.5rem;
 }
 
-.fa-check:hover {
+.fa-check:hover,
+.fa-check-completed {
 	color: greenyellow;
 }
 
