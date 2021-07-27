@@ -1,0 +1,60 @@
+/* .addTodo input:focus + button {
+	opacity: 1;
+	transform: translate(50%, -50%) scale(1) rotate(0deg);
+} */
+
+.addTodo input {
+	width: 20rem;
+	border-radius: 5px;
+	padding: 0.5rem 1rem;
+	/* background: rgb(70, 70, 70); */
+	background: rgb(90, 90, 180);
+
+	/* background: transparent; */
+	margin: 0;
+	margin-left: 2rem;
+	outline: 0;
+	border: 2px solid #e8ebed;
+	transition: background 0.25s ease-out;
+}
+.addTodo input:focus {
+	background: rgb(70, 70, 270);
+}
+
+.addTodo button {
+	/* text-align: center;
+	color: #fafafa;
+	line-height: 1;
+	position: absolute; */
+	font-size: 150%;
+	/* right: 0;
+	top: 50%; */
+	border-radius: 50%;
+	width: 55px;
+	/* height: 55px;
+	background: #2ecc71;
+	opacity: 0;
+	transform: translate(0, -50%) scale(0) rotate(180deg); */
+	transition: transform, opacity, 0.5s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+}
+
+/* .addTodo button:focus {
+	opacity: 1;
+	transform: translate(50%, -50%) scale(1.1) rotate(0deg);
+}
+
+.addTodo button:active {
+	opacity: 1;
+	transition: transform, opacity, 0.1s cubic-bezier(0.87, -0.41, 0.19, 1.44);
+	transform: translate(50%, -50%) scale(0.95) rotate(0deg);
+} */
+
+label {
+	font-size: 2rem;
+}
+
+input.invalid,
+input.invalid:focus {
+	/* border: 2px solid #e78282; */
+	background: #e78282;
+}

@@ -1,0 +1,36 @@
+.todoItem {
+	display: flex;
+	justify-content: space-between;
+}
+
+.todoItem div {
+	width: 3.5rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.fa-trash {
+	font-size: 1.5rem;
+}
+
+.fa-trash:hover {
+	color: #e78282;
+}
+
+.fa-check {
+	font-size: 1.5rem;
+}
+
+.fa-check:hover {
+	color: greenyellow;
+}
+
+.completed span {
+	/* color: rgb(180, 180, 180); */
+	color: greenyellow;
+}
+
+.completed {
+	text-decoration: line-through;
+	color: black;
+}

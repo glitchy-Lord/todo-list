@@ -1,0 +1,9 @@
+.filter {
+	text-align: start;
+}
+
+select,
+option {
+	/* background-color: black; */
+	color: black;
+}
