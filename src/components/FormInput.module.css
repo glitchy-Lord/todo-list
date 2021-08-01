@@ -58,3 +58,13 @@ input.invalid:focus {
 	/* border: 2px solid #e78282; */
 	background: #e78282;
 }
+
+.fa-plus {
+	font-size: 1.5rem;
+	transition: all 300ms;
+}
+
+.fa-plus:hover {
+	color: greenyellow;
+	transform: rotate(180deg) scale(1.3);
+}

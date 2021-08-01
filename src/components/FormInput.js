@@ -40,9 +40,10 @@ const FormInput = (props) => {
 					// onBlur={inputBlurHandler}
 					value={enteredTodo}
 					className={`${!isValid && classes.invalid}`}
+					autoFocus
 				/>
 				<button>
-					<i className='fa fa-plus'></i>
+					<i className={`fa fa-plus ${classes['fa-plus']}`}></i>
 				</button>
 			</div>
 			{!isValid && <p>Please enter a valid todo</p>}

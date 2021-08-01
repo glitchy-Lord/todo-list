@@ -1,12 +1,18 @@
 .todoItem {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 1rem;
+	overflow-wrap: anywhere;
 }
 
 .todoItem div {
 	width: 3.5rem;
 	display: flex;
 	justify-content: space-between;
+}
+
+.todoItem span {
+	max-width: 80%;
 }
 
 .fa-trash {
