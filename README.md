@@ -1,3 +1,8 @@
+How to get Started with the application:
+1. Clone the repository from GitHub by running `git clone <link>
+2. Run npm install to download all dependencies and packages required in package.json file
+3. Start the server by typing 'npm start' or 'yarn start' command on your terminal/command prompt
+4. Open a browser window and type localhost:3000 as URL to see the application working
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
